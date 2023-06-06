@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektPMALidak.Pages.SeachPage"
+             Title="SeachPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Label Text="Vyhledej nazev"
+                       VerticalOptions="Center"
+                       Margin="20"/>
+                <Entry x:Name="NameFilter"
+                       MinimumWidthRequest="100"
+                       TextChanged="NameFilter_TextChanged"/>
+            </HorizontalStackLayout>
+            <CollectionView
+                x:Name="ShowView"
+                ItemsLayout="VerticalGrid, 2"
+                SelectionChanged="ShowView_SelectionChanged"
+                SelectionMode="Single"
+                ItemsSource="{Binding SearchItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Padding="10"
+                                             HeightRequest="200">
+                            <Label
+                                Text="{Binding title}"
+                                FontAttributes="Bold"
+                                LineBreakMode="WordWrap" 
+                                Padding="5"/>
+                                <HorizontalStackLayout>
+                                    <Image
+                                        Source="{Binding picture}"
+                                        Aspect="AspectFill"
+                                        HeightRequest="100"/>
+                                    <VerticalStackLayout
+                                        Margin="5">
+                                        <Label
+                                            Text="{Binding status}"
+                                            LineBreakMode="TailTruncation"
+                                            FontAttributes="Italic"
+                                            VerticalOptions="End" />
+                                        <Label
+                                            Text="{Binding score}"/>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

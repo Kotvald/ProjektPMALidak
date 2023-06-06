@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektPMALidak.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <VerticalStackLayout
+                Margin="20">
+            
+                <Label
+                    Text="Vyhledej Show"
+                    HorizontalOptions="Center"/>
+                
+                <Entry Placeholder="Zadej vyhledávanou frázy"
+                       x:Name="SearchEntry"/>
+                
+                <Button
+                    Text="Hledat"
+                    Clicked="SeachButton"/>
+                    
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="20">
+                
+                <Label
+                    Text="Uživatelské jméno"
+                    HorizontalOptions="Center"/>
+
+                <Entry Placeholder="Zadej uživatelské jméno na MAL"
+                       x:Name="UsernameEntry"/>
+
+                <Button
+                    Text="Zobraz muj list"
+                    Clicked="MyListButton"/>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>

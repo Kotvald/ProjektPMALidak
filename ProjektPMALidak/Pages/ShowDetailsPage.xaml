@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektPMALidak.Pages.ShowDetailsPage"
+             Title="Detaily">
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="10">
+
+            <Border
+                StrokeThickness="0"
+                BackgroundColor="Transparent"
+                StrokeShape="RoundRectangle 40,20,20,40"
+                >
+                <VerticalStackLayout
+                    BackgroundColor="#0F0F0F"
+                    Padding="20"
+                    >
+                    <Label x:Name="Header"
+                           FontSize="25"
+                           FontAttributes="Bold"/>
+                    <Label 
+                           Margin="0,20,0,0"
+                           x:Name="AlternativeHeader"
+                           FontSize="12"
+                           FontAttributes="Italic"/>
+                    <Image
+                        HeightRequest="200"
+                        x:Name="MainImage"/>
+                    <Label
+                        x:Name="ScoreView"
+                        FontSize="25"
+                        FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </Border>
+            <StackLayout
+                Margin="10,5"
+                Orientation="Vertical">
+                <Label
+                    x:Name="ShowStartDisplay"
+                    FontSize="20"/>
+                <Label
+                    x:Name="DescView"
+                    FontSize="12"
+                    Margin="0,0,0,20"/>
+            
+                <VerticalStackLayout
+                    BackgroundColor="#0F0F0F"
+                    Padding="10">
+                     <Label
+                         x:Name="GenresView"
+                         FontSize="15"
+                         Margin="0,0,0,10"/>
+                     <Label
+                         x:Name="StudiosView"
+                        FontSize="15"/>
+                </VerticalStackLayout>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
